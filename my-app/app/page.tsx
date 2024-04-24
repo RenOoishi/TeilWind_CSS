@@ -4,7 +4,7 @@ import Head from 'next/head';
 export default function Home() {
   return (
     <main className="antialiased overflow-x-hidden">
-      <div className="ontainer mx-auto px-6">
+      <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between py-8 px-4 sm:px-0">
           <a href="" aria-label="TailwindTemplates logo" className="w-1/4 text-primary font-bold text-2xl flex items-center space-x-2">
               <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
