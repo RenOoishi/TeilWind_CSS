@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Head from 'next/head';
+import { Nunito } from "next/font/google";
+
+const nunito = Nunito({ 
+  weight: ["400", "500"],
+  subsets: ["latin"],
+  display: "swap" 
+});
 
 export default function Home() {
   return (
-    <main className="antialiased overflow-x-hidden">
+    <main className={nunito.className="antialiased overflow-x-hidden"}>
       <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between py-8 px-4 sm:px-0">
           <a href="" aria-label="TailwindTemplates logo" className="w-1/4 text-primary font-bold text-2xl flex items-center space-x-2">
@@ -17,7 +24,7 @@ export default function Home() {
                   </g>
                 </svg>
               </div>
-            <h1 className="text-2xl font-bold hidden sm:block">TeilwindTemplate</h1>  
+            <h1 className="text-2xl font-bold hidden sm:block">TeilwindTemplates</h1>  
           </a>
           <div className="w-2/4 hidden lg:block">
             <ul className="grid grid-cols-4 gap-4 text-center text-ui-primary">
@@ -63,20 +70,19 @@ export default function Home() {
               </div>
               <div className="flex">
                 <a className="mr-2" href="https://twitter.com/intent/tweet?text=TailwindTemplates v2 is here&url=https://tailwindtemplates.io/blog/tailwindtemplates-v2-is-here" target="_blank">
-                  <svg width="24" height="24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 00-7.86 3v1a10.66 10.66 0 01-9-4.53s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="Black" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </a>
                 <a className="mr-2" href="https://www.facebook.com/sharer/sharer.php?u=https://tailwindtemplates.io/blog/tailwindtemplates-v2-is-here" target="_blank">
-                  <svg width="24" height="24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 2h-3a5 5 0 00-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </a>
                 <a className="mr-2" href="https://www.linkedin.com/shareArticle?mini=true?url=https://tailwindtemplates.io/blog/tailwindtemplates-v2-is-here&title=TailwindTemplates v2 is here&summary=tailwindtemplates.io&source=TailwindTemplates" target="_blank">
-                  <svg width="24" height="24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+                <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M 2.757813 1 C 1.792969 1 1 1.792969 1 2.757813 L 1 12.246094 C 1 13.207031 1.792969 14 2.757813 14 L 12.246094 14 C 13.207031 14 14 13.207031 14 12.246094 L 14 2.757813 C 14 1.792969 13.207031 1 12.246094 1 Z M 2.757813 2 L 12.246094 2 C 12.667969 2 13 2.332031 13 2.757813 L 13 12.246094 C 13 12.667969 12.667969 13 12.246094 13 L 2.757813 13 C 2.332031 13 2 12.667969 2 12.246094 L 2 2.757813 C 2 2.332031 2.332031 2 2.757813 2 Z M 4 3 C 3.449219 3 3 3.449219 3 4 C 3 4.550781 3.449219 5 4 5 C 4.550781 5 5 4.550781 5 4 C 5 3.449219 4.550781 3 4 3 Z M 3 6 L 3 12 L 5 12 L 5 6 Z M 6 6 L 6 12 L 8 12 L 8 9.320313 C 8 8.488281 8.078125 7.742188 9.078125 7.742188 C 10.0625 7.742188 10 8.636719 10 9.375 L 10 12 L 12 12 L 12 9.039063 C 12 7.320313 11.640625 6 9.691406 6 C 8.753906 6 8.28125 6.375 8.023438 6.875 L 8 6.875 L 8 6 Z" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
                 </a>
               </div>
             </div>
@@ -103,7 +109,45 @@ export default function Home() {
       </div>
 
       <div className="bg-primary">
-
+        <footer className="mx-auto container px-6 pt-24 pb-16">
+          <div className="grid lg:grid-cols-3 px-6 lg:px-0 gap-4">
+            <div className="text-white">
+              <h1 className="font-bold text-lg text-white">About</h1>
+              <ul className="space-y-1">
+                <li><a href="http://j-hiz.com" className="hover:text-secondary-lighter" target="_blank" rel="noopener">Me</a></li>
+                <li><a href="o-ren-2409@occ.co.jp">Contact</a></li>
+                <li><a href="https://tailwindtemplates.io/disclaimer">Disclaimer</a></li>
+              </ul>
+            </div>
+            <div className="text-white">
+              <h1 className="font-bold text-lg text-white">Resources</h1>
+              <ul className="space-y-1">
+                <li><a href="https://www.knowies.com/collections/77d247ce-14fd-11eb-91a4-5616ea45b6fe" rel="noopener" target="_blank">Amazing tools</a></li>
+                <li><a href="https://tailwindtemplates.io/blog">Blog</a></li>
+              </ul>
+            </div>
+            <div className="text-white">
+              <div className="mt-4 inline-block">
+                <a href="https://tailwindtemplates.m-pages.com/newsletter" target="_blank" rel="noopener" className="bg-secondary py-2 px-3 -ml-1 rounded-lg text-white font-bold flex hover:bg-secondary-lighter">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>Subscribe to newsletter
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="flex lg:justify-center px-6 lg:px-0 items-center mt-12 mb-6">
+            {/* <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+            <script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#FF2773', 'P5P3361L1'); 
+            kofiwidget2.draw();</script> */}
+          </div>
+          <div className="lg:justify-center items-center flex px-6 lg:px-0 text-white">
+            <p className="text-white">Built with <a className="hover:text-secondary" href="https://tallstack.dev/" rel="noopener">TALL stack</a> & 
+              <a className="text-lg hover:text-red-500 cursor-default">❤</a> by 
+              <a className="hover:text-secondary" href="http://j-hiz.com" rel="noopener">J-hiz</a>
+            </p>
+          </div>
+        </footer>
       </div>
     </main>
   );
